@@ -19,7 +19,7 @@ const Home = () => {
           name="description"
           content="Trekkkr el sitio web que ayuda a conectar senderistas con otros senderistas alrededor del mundo, donde puedes unirte a otras caminatas, crear tus propios eventos, elegir si son publicos o solo para tus amigos"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.jpg" />
       </Head>
 
       <Navbar />
