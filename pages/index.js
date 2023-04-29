@@ -49,7 +49,6 @@ const Home = () => {
         Llena el siguiente formulario para mantenerte al tanto de nuestra fecha de lanzamiento e información importante de nuestro progreso
       </SectionTitle>
       <Form />
-      <Cta />
       <Footer />
     </>
   )
