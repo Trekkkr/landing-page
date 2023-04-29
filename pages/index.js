@@ -35,9 +35,9 @@ const Home = () => {
       <SectionTitle
         id='FAQ'
         pretitle='FAQ'
-        title='Frequently Asked Questions'
+        title='Preguntas frecuentes'
       >
-        Conoce las preguntas más frecuentes que hemos recibido de la comunidad. Si tienes alguna pregunta o alguna idea que pueda mejorar Trekkkr, escribenos en el formulario de abajo
+        Si tienes alguna pregunta diferente o alguna idea que pueda mejorar Trekkkr, escribenos en el formulario de la waitlist en el campo mensaje
       </SectionTitle>
       <Faq />
       <SectionTitle
@@ -45,7 +45,7 @@ const Home = () => {
         pretitle='waitlist'
         title='Mantente informado'
       >
-        Llena el siguiente formulario para mantenerte al tanto de nuestra fecha de lanzamiento e información importante de nuestro progreso
+        Llena el siguiente formulario para acceder a la waitlist y mantenerte al tanto de nuestra fecha de lanzamiento
       </SectionTitle>
       <Form />
       <Footer />
