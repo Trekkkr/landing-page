@@ -17,7 +17,7 @@ const Faq = () => {
                     <ChevronUpIcon
                       className={`${
                         open ? "transform rotate-180" : ""
-                      } w-5 h-5 text-indigo-500`}
+                      } w-5 h-5 text-[#ec5153]`}
                     />
                   </Disclosure.Button>
                   <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
@@ -35,22 +35,32 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "¿Cuánto costará Trekkkr?",
+    answer: "Trekkkr aún no tiene definido su modelo de negocios final, sin embargo estamos analizando 2 opciones: modelo SaaS o comisión por transacción generada dentro de la plataforma",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "¿Son una agencia de viajes más?",
+    answer: "No, nuestra idea es ser un aliado para agencias, guías independientes y senderistas. Nuestro objetivo es unir todas las partes para crear una mejor experiencia de usuario y facilitar los procesos entre estas 3 piezas",
   },
   {
-    question: "What is your refund policy? ",
+    question: "¿En que estapa se encuentran?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Actualmente estamos en la fase de validación del mercado, necesitamos confirmar que resolveremos un problema real y si hay personas dispuestas a pagar por nuestros servicios",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "¿Cuándo será su lanzamiento?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "El roadmap esta planeado para que el 31 de mayo lancemos nuestra primer versión, sin embargo puede haber cambios",
+  },
+  {
+    question: "¿Para qué es la waitlist?",
+    answer:
+      "La waitlist es uno de nuestro puntos de validación del mercado y el medio de contacto con la comunidad. Será la forma en como te mantendremos informado de nuestro progreso y la fecha exacta del lanzamiento",
+  },
+  {
+    question: "¿Qué gano al registrarme a la waitlist?",
+    answer:
+      "A todos los early adopters les daremos periodos de prueba gratuitos, insignias especiales como muestra de agradecimiento que en futuro les dará beneficios especiales y prioridad para considerar propuestas de nuevas funcionalidades o mejoras",
   },
 ];
 
