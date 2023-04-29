@@ -4,10 +4,8 @@ import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 
 import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
-import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
@@ -16,10 +14,10 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Trekkkr - Landing page</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Trekkkr el sitio web que ayuda a conectar senderistas con otros senderistas alrededor del mundo, donde puedes unirte a otras caminatas, crear tus propios eventos, elegir si son publicos o solo para tus amigos"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -27,37 +25,29 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        id='¿Qué es Trekkkr?'
+        pretitle="Conocenos"
+        title="¿Qué es Trekkkr?">
+          Una plataforma digital que busca eliminar la desorganización y dificultad en los procesos tradicionales de las agencias y grupos de facebook para crear, organizar y reservar viajes en el senderismo  
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <Video />
-      <SectionTitle
-        pretitle="Testimonials"
-        title="Here's what our customers said">
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
-      </SectionTitle>
-      <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+      <SectionTitle 
+        id='FAQ'
+        pretitle="FAQ" 
+        title="Frequently Asked Questions">
+          Conoce las preguntas más frecuentes que hemos recibido de la comunidad. Si tienes alguna pregunta o alguna idea que pueda mejorar Trekkkr, escribenos en el formulario de abajo
       </SectionTitle>
       <Faq />
+      <SectionTitle 
+        id='waitlist'
+        pretitle="waitlist" 
+        title="Mantente informado">
+          Llena el siguiente formulario para mantenerte al tanto de nuestra fecha de lanzamiento e información importante de nuestro progreso  
+      </SectionTitle>
       <Cta />
       <Footer />
-      <PopupWidget />
+      {/* <PopupWidget /> */}
     </>
   );
 }
