@@ -54,12 +54,12 @@ const faqdata = [
   {
     question: '¿Para qué es la waitlist?',
     answer:
-      'La waitlist es uno de nuestro puntos de validación del mercado y el medio de contacto con la comunidad. Será la forma en como te mantendremos informado de nuestro progreso y la fecha exacta del lanzamiento'
+      'La waitlist es uno de nuestros puntos de validación del mercado y el medio de contacto con la comunidad. Será la forma en como te mantendremos informado de nuestro progreso y la fecha exacta del lanzamiento'
   },
   {
     question: '¿Qué gano al registrarme a la waitlist?',
     answer:
-      'A todos los early adopters les daremos periodos de prueba gratuitos, insignias especiales como muestra de agradecimiento que en futuro les dará beneficios especiales y prioridad para considerar propuestas de nuevas funcionalidades o mejoras'
+      'A todos los early adopters les daremos periodos de prueba gratuitos, insignias especiales como muestra de agradecimiento que a futuro les dará beneficios especiales y prioridad en la propuesta de nuevas funcionalidades o mejoras'
   }
 ]
 
