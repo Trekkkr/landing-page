@@ -50,15 +50,15 @@ export const Form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log(formData)
-    // const url = '/api/submit'
+    const url = '/api/submit'
 
-    // try {
-    //   const response = await axios.post(url, formData)
-    //   console.log(response)
-    //   setIsSuccess(true)
-    // } catch (error) {
-    //   console.error('API error:', error)
-    // }
+    try {
+      const response = await axios.post(url, formData)
+      console.log(response)
+      setIsSuccess(true)
+    } catch (error) {
+      console.error('API error:', error)
+    }
   }
 
   return (
