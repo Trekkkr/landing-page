@@ -6,7 +6,6 @@ import SectionTitle from '../components/sectionTitle'
 import { benefitOne, benefitTwo } from '../components/data'
 import Benefits from '../components/benefits'
 import Footer from '../components/footer'
-import Cta from '../components/cta'
 import Faq from '../components/faq'
 import { Form } from '../components/Form'
 
