@@ -57,7 +57,7 @@ const benefitTwo = {
     },
     {
       title: "Acepta anticipos",
-      desc: "Controla si tus eventos de pago requieren anticipos para reservar un lugar en tu evento",
+      desc: "Para tus eventos de pago, elige si requieren anticipo para ser reservardos",
       icon: <CreditCardIcon />,
     },
     {
