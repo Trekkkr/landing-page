@@ -5,15 +5,12 @@ import { Disclosure } from "@headlessui/react";
 
 const Navbar = () => {
   const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
+    "¿Qué es Trekkkr?",
+    "FAQ",
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white dark:bg-trueGray-900 sticky top-0">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
@@ -69,7 +66,7 @@ const Navbar = () => {
                           {item}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-[#EC5153] rounded-md lg:ml-5">         
+                    <Link href="#waitlist" className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md lg:ml-5">         
                         Waitlist
                     </Link>
                   </>
@@ -84,7 +81,7 @@ const Navbar = () => {
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href={`#${menu}`} className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-[#EC5153] hover:bg-gray-50 focus:text-[#EC5153] focus:bg-gray-100 focus:outline-none dark:focus:bg-gray-800">
+                <Link href={`#${menu}`} className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-[#EC5153] hover:bg-gray-50 focus:text-[#EC5153] focus:bg-gray-50 focus:outline-none dark:focus:bg-gray-800">
                     {menu}
                 </Link>
               </li>
@@ -93,7 +90,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-[#EC5153] rounded-md md:ml-5">
+          <Link href="#waitlist" className="px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md md:ml-5">
               Waitlist
           </Link>
 
