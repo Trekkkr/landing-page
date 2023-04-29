@@ -13,8 +13,8 @@ import benefitOneImg from "../public/images/benefit-one.png";
 import benefitTwoImg from "../public/images/benefit-two.png";
 
 const benefitOne = {
-  title: "¿Cómo lo haremos?",
-  desc: "Estos son algunos de las soluciones que Trekkkr ofrecerá a los senderistas, guías independientes y agencias:",
+  title: "¿Qué hace Trekkkr?",
+  desc: "Estas son algunas de las funcionalidades que Trekkkr ofrecerá a senderistas, guías independientes y agencias:",
   image: benefitOneImg,
   bullets: [
     {
