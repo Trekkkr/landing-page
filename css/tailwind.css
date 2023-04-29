@@ -2,9 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-color: #ec5153;
+}
+
 @layer base {
   html,
   body {
     @apply dark:bg-trueGray-900;
   }
+}
+
+.logo-light {
+  display: none;
+}
+
+.logo-dark {
+  display: block;
+}
+
+.dark .logo-dark {
+  display: none;
+}
+
+.dark .logo-light {
+  display: block;
 }
