@@ -1,28 +1,43 @@
+import Script from 'next/script'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { ThemeProvider } from 'next-themes'
+import * as gtag from '../gtag'
 import '../css/tailwind.css'
 
 function MyApp ({ Component, pageProps }) {
-  const isProd = process.env.NODE_ENV === 'production'
   const router = useRouter()
 
   useEffect(() => {
     const handleRouteChange = url => {
-      if (isProd) {
-        window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
-          page_path: url
-        })
-      }
+      gtag.pageview(url)
     }
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
-      router.event.off('routeChangeComplete', handleRouteChange)
+      router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
 
   return (
     <ThemeProvider attribute='class'>
+      <Script
+        strategy='afterInteractive'
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <Script
+        id='gtag-init'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `
+        }}
+      />
       <Component {...pageProps} />
     </ThemeProvider>
   )
