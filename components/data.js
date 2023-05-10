@@ -9,8 +9,8 @@ import {
   UsersIcon
 } from '@heroicons/react/24/solid'
 
-import benefitOneImg from '../public/images/benefit-one.png'
-import benefitTwoImg from '../public/images/benefit-two.png'
+import benefitOneImg from '../public/images/benefit-one.webp'
+import benefitTwoImg from '../public/images/benefit-two.webp'
 
 const benefitOne = {
   title: '¿Qué hace Trekkkr?',
