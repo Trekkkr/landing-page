@@ -3,6 +3,7 @@ import axios from 'axios'
 import Container from './container'
 
 import { selects } from '../constants/countries'
+import { Toaster, toast } from 'react-hot-toast'
 
 const inputs = [
   {
@@ -21,6 +22,7 @@ const inputs = [
 
 export const Form = () => {
   const [isSuccess, setIsSuccess] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -47,18 +49,28 @@ export const Form = () => {
     }))
   }
 
-  const handleSubmit = async (event) => {
+  const fetchData = async (event) => {
     event.preventDefault()
-    console.log(formData)
     const url = '/api/submit'
 
+    setIsLoading(true)
+
     try {
-      const response = await axios.post(url, formData)
-      console.log(response)
+      await axios.post(url, formData)
       setIsSuccess(true)
     } catch (error) {
       console.error('API error:', error)
+    } finally {
+      setIsLoading(false)
     }
+  }
+
+  const handleSubmit = async (data) => {
+    toast.promise(fetchData(data), {
+      loading: 'Loading',
+      success: 'Mensaje enviado!',
+      error: 'Mensaje NO enviado!'
+    })
   }
 
   return (
@@ -126,9 +138,22 @@ export const Form = () => {
               placeholder='Agrega una pregunta o comentario (opcional)'
             />
 
-            <input type='submit' value='Enviar' className='p-4 rounded-lg bg-blue-600 hover:bg-blue-700 cursor-pointer w-full text-white' />
+            <input
+              type='submit'
+              value='Enviar'
+              disabled={isLoading}
+              className={`
+                p-4
+                rounded-lg
+                bg-blue-600
+                ${isLoading ? '' : 'hover:bg-blue-700'}
+                ${isLoading ? '' : 'cursor-pointer'}
+                w-full
+                text-white`}
+            />
           </form>
           )}
+      <Toaster />
     </Container>
   )
 }
