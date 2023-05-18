@@ -24,9 +24,9 @@ class MyDocument extends Document {
           </Script>
 
           {/* Hotjar tracking code */}
-          <Script>
+          <Script
             dangerouslySetInnerHTML={{
-            __html: `(function(h,o,t,j,a,r){
+              __html: `(function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                 h._hjSettings={hjid:3497061,hjsv:6};
                 a=o.getElementsByTagName('head')[0];
@@ -34,8 +34,8 @@ class MyDocument extends Document {
                 r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                 a.appendChild(r);
               })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
-          }}
-          </Script>
+            }}
+          />
 
           <Link
             href='https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap'
